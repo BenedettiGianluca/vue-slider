@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}
+
+.immagineGrande {
+    position: relative;
+    background-image: url("../consegna/img/02.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    width: 750px;
+    height: 300px;
+}
+
+.Location {
+    position: absolute;
+    bottom: 20%;
+    right: 10%;
+}
+
+.descrizioneLocation {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    padding-left: 10%;
+}
+
+/*.immaginiDiLato {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}*/
+
+.frecciaSu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 15%;
+    left: 42%;
+    font-size: 20px;
+    background-color: #cccccc;
+    color: #424242;
+    width: 23px;
+    height: 23px;
+    border-radius: 50px;
+}
+
+.img1 {
+    position: relative;
+    background-image: url("../consegna/img/01.jpg");
+    background-size: cover;
+    width: 150px;
+    height: 60px;
+}
+
+.img2 {
+    position: relative;
+    background-image: url("../consegna/img/02.jpg");
+    background-size: cover;
+    width: 150px;
+    height: 60px;
+}
+
+.img3 {
+    position: relative;
+    background-image: url("../consegna/img/03.jpg");
+    background-size: cover;
+    width: 150px;
+    height: 60px;
+}
+
+.img4 {
+    position: relative;
+    background-image: url("../consegna/img/04.jpg");
+    background-size: cover;
+    width: 150px;
+    height: 60px;
+}
+
+.img5 {
+    position: relative;
+    background-image: url("../consegna/img/05.jpg");
+    background-size: cover;
+    width: 150px;
+    height: 60px;
+}
+
+.frecciaGiù {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 15%;
+    left: 42%;
+    font-size: 20px;
+    background-color: #cccccc;
+    color: #424242;
+    width: 23px;
+    height: 23px;
+    border-radius: 50px;
+}
+
+.trasparenza {
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 150px;
+    height: 60px;
+}
