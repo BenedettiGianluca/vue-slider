@@ -21,30 +21,25 @@
     height: 300px;
 }
 
-.Location {
+.location {
     position: absolute;
-    bottom: 20%;
-    right: 10%;
+    bottom: 25%;
+    right: 8%;
 }
 
 .descrizioneLocation {
     position: absolute;
-    bottom: 10%;
-    right: 10%;
-    padding-left: 10%;
+    bottom: 8%;
+    right: 8%;
+    padding-left: 8%;
 }
 
-/*.immaginiDiLato {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}*/
-
-.frecciaSu {
+.frecciaSopra {
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
+    z-index: 2;
     top: 15%;
     left: 42%;
     font-size: 20px;
@@ -95,11 +90,12 @@
     height: 60px;
 }
 
-.frecciaGiù {
+.frecciaSotto {
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
+    z-index: 2;
     bottom: 15%;
     left: 42%;
     font-size: 20px;
