@@ -25,14 +25,18 @@ const text = [
 let frecciaSopra = document.querySelector('.frecciaSopra');
 let frecciaSotto = document.querySelector('.frecciaSotto');
 let immagineSelezionata = 2;
-let trasparenzaImg1 = document.querySelector('.img1 .trasparenza');
-let trasparenzaImg2 = document.querySelector('.img2 .trasparenza');
-let trasparenzaImg3 = document.querySelector('.img3 .trasparenza');
-let trasparenzaImg4 = document.querySelector('.img4 .trasparenza');
-let trasparenzaImg5 = document.querySelector('.img5 .trasparenza');
+let trasparenza = document.querySelectorAll('.trasparenza');
 let immagineGrande = document.querySelector('.immagineGrande');
 let locazione = document.querySelector('.location');
 let descrizioneLocation = document.querySelector('.descrizioneLocation');
+
+trasparenza[1].style.backgroundColor='rgba(0, 0, 0, 0.0)';
+trasparenza[1].style.borderWidth='5px';
+trasparenza[1].style.borderStyle='inset';
+trasparenza[1].style.borderColor='#cccccc';
+immagineGrande.style.backgroundImage='url("consegna/img/02.jpg")';
+locazione.innerHTML=title[1];
+descrizioneLocation.innerHTML=text[1];
 
 frecciaSopra.addEventListener('click', function(){
     if (immagineSelezionata>0){
@@ -41,90 +45,39 @@ frecciaSopra.addEventListener('click', function(){
     if (immagineSelezionata==0){
         immagineSelezionata = 5;
     }
-    if (immagineSelezionata==1){
-        trasparenzaImg1.style.backgroundColor='rgba(0, 0, 0, 0.0)';
-        trasparenzaImg1.style.borderWidth='5px';
-        trasparenzaImg1.style.borderStyle='inset';
-        trasparenzaImg1.style.borderColor='#cccccc';
-        immagineGrande.style.backgroundImage='url("consegna/img/01.jpg")';
-        locazione.innerHTML=title[0];
-        descrizioneLocation.innerHTML=text[0];
-        trasparenzaImg2.style.backgroundColor='rgba(0, 0, 0, 0.6)';
-        trasparenzaImg2.style.border='none';
-        trasparenzaImg3.style.backgroundColor='rgba(0, 0, 0, 0.6)';
-        trasparenzaImg3.style.border='none';
-        trasparenzaImg4.style.backgroundColor='rgba(0, 0, 0, 0.6)';
-        trasparenzaImg4.style.border='none';
-        trasparenzaImg5.style.backgroundColor='rgba(0, 0, 0, 0.6)';
-        trasparenzaImg5.style.border='none';
+    for(x=0;x<5;x++){
+        trasparenza[x].style.backgroundColor='rgba(0, 0, 0, 0.6)';
+        trasparenza[x].style.border='none';
     }
-    if (immagineSelezionata==2){
-        trasparenzaImg2.style.backgroundColor='rgba(0, 0, 0, 0.0)';
-        trasparenzaImg2.style.borderWidth='5px';
-        trasparenzaImg2.style.borderStyle='inset';
-        trasparenzaImg2.style.borderColor='#cccccc';
-        immagineGrande.style.backgroundImage='url("consegna/img/02.jpg")';
-        locazione.innerHTML=title[1];
-        descrizioneLocation.innerHTML=text[1];
-        trasparenzaImg1.style.backgroundColor='rgba(0, 0, 0, 0.6)';
-        trasparenzaImg1.style.border='none';
-        trasparenzaImg3.style.backgroundColor='rgba(0, 0, 0, 0.6)';
-        trasparenzaImg3.style.border='none';
-        trasparenzaImg4.style.backgroundColor='rgba(0, 0, 0, 0.6)';
-        trasparenzaImg4.style.border='none';
-        trasparenzaImg5.style.backgroundColor='rgba(0, 0, 0, 0.6)';
-        trasparenzaImg5.style.border='none';
-    }
-    if (immagineSelezionata==3){
-        trasparenzaImg3.style.backgroundColor='rgba(0, 0, 0, 0.0)';
-        trasparenzaImg3.style.borderWidth='5px';
-        trasparenzaImg3.style.borderStyle='inset';
-        trasparenzaImg3.style.borderColor='#cccccc';
-        immagineGrande.style.backgroundImage='url("consegna/img/03.jpg")';
-        locazione.innerHTML=title[2];
-        descrizioneLocation.innerHTML=text[2];
-        trasparenzaImg1.style.backgroundColor='rgba(0, 0, 0, 0.6)';
-        trasparenzaImg1.style.border='none';
-        trasparenzaImg2.style.backgroundColor='rgba(0, 0, 0, 0.6)';
-        trasparenzaImg2.style.border='none';
-        trasparenzaImg4.style.backgroundColor='rgba(0, 0, 0, 0.6)';
-        trasparenzaImg4.style.border='none';
-        trasparenzaImg5.style.backgroundColor='rgba(0, 0, 0, 0.6)';
-        trasparenzaImg5.style.border='none';
-    }
-    if (immagineSelezionata==4){
-        trasparenzaImg4.style.backgroundColor='rgba(0, 0, 0, 0.0)';
-        trasparenzaImg4.style.borderWidth='5px';
-        trasparenzaImg4.style.borderStyle='inset';
-        trasparenzaImg4.style.borderColor='#cccccc';
-        immagineGrande.style.backgroundImage='url("consegna/img/04.jpg")';
-        locazione.innerHTML=title[3];
-        descrizioneLocation.innerHTML=text[3];
-        trasparenzaImg1.style.backgroundColor='rgba(0, 0, 0, 0.6)';
-        trasparenzaImg1.style.border='none';
-        trasparenzaImg2.style.backgroundColor='rgba(0, 0, 0, 0.6)';
-        trasparenzaImg2.style.border='none';
-        trasparenzaImg3.style.backgroundColor='rgba(0, 0, 0, 0.6)';
-        trasparenzaImg3.style.border='none';
-        trasparenzaImg5.style.backgroundColor='rgba(0, 0, 0, 0.6)';
-        trasparenzaImg5.style.border='none';
-    }
-    if (immagineSelezionata==5){
-        trasparenzaImg5.style.backgroundColor='rgba(0, 0, 0, 0.0)';
-        trasparenzaImg5.style.borderWidth='5px';
-        trasparenzaImg5.style.borderStyle='inset';
-        trasparenzaImg5.style.borderColor='#cccccc';
-        immagineGrande.style.backgroundImage='url("consegna/img/05.jpg")';
-        locazione.innerHTML=title[4];
-        descrizioneLocation.innerHTML=text[4];
-        trasparenzaImg1.style.backgroundColor='rgba(0, 0, 0, 0.6)';
-        trasparenzaImg1.style.border='none';
-        trasparenzaImg2.style.backgroundColor='rgba(0, 0, 0, 0.6)';
-        trasparenzaImg2.style.border='none';
-        trasparenzaImg3.style.backgroundColor='rgba(0, 0, 0, 0.6)';
-        trasparenzaImg3.style.border='none';
-        trasparenzaImg4.style.backgroundColor='rgba(0, 0, 0, 0.6)';
-        trasparenzaImg4.style.border='none';
+    for (x=1;x<=5;x++){
+        if (immagineSelezionata==x){
+            trasparenza[x-1].style.backgroundColor='rgba(0, 0, 0, 0.0)';
+            trasparenza[x-1].style.borderWidth='5px';
+            trasparenza[x-1].style.borderStyle='inset';
+            trasparenza[x-1].style.borderColor='#cccccc';
+            switch(x) {
+                case 1:
+                    immagineGrande.style.backgroundImage='url("consegna/img/01.jpg")';
+                    break;
+
+                case 2:
+                    immagineGrande.style.backgroundImage='url("consegna/img/02.jpg")';
+                    break;
+
+                case 3:
+                    immagineGrande.style.backgroundImage='url("consegna/img/03.jpg")';
+                    break;
+
+                case 4:
+                    immagineGrande.style.backgroundImage='url("consegna/img/04.jpg")';
+                    break;
+            
+                default: immagineGrande.style.backgroundImage='url("consegna/img/05.jpg")';
+                    break;
+            }
+            locazione.innerHTML=title[x-1];
+            descrizioneLocation.innerHTML=text[x-1];
+        }
     }
 });
 frecciaSotto.addEventListener('click', function(){
@@ -134,135 +87,38 @@ frecciaSotto.addEventListener('click', function(){
     if (immagineSelezionata==6){
         immagineSelezionata = 1;
     }
-    if (immagineSelezionata==1){
-        trasparenzaImg1.style.backgroundColor='rgba(0, 0, 0, 0.0)';
-        trasparenzaImg1.style.borderWidth='5px';
-        trasparenzaImg1.style.borderStyle='inset';
-        trasparenzaImg1.style.borderColor='#cccccc';
-        immagineGrande.style.backgroundImage='url("consegna/img/01.jpg")';
-        locazione.innerHTML=title[0];
-        descrizioneLocation.innerHTML=text[0];
-        trasparenzaImg2.style.backgroundColor='rgba(0, 0, 0, 0.6)';
-        trasparenzaImg2.style.border='none';
-        trasparenzaImg3.style.backgroundColor='rgba(0, 0, 0, 0.6)';
-        trasparenzaImg3.style.border='none';
-        trasparenzaImg4.style.backgroundColor='rgba(0, 0, 0, 0.6)';
-        trasparenzaImg4.style.border='none';
-        trasparenzaImg5.style.backgroundColor='rgba(0, 0, 0, 0.6)';
-        trasparenzaImg5.style.border='none';
+    for(x=0;x<5;x++){
+        trasparenza[x].style.backgroundColor='rgba(0, 0, 0, 0.6)';
+        trasparenza[x].style.border='none';
     }
-    if (immagineSelezionata==2){
-        trasparenzaImg2.style.backgroundColor='rgba(0, 0, 0, 0.0)';
-        trasparenzaImg2.style.borderWidth='5px';
-        trasparenzaImg2.style.borderStyle='inset';
-        trasparenzaImg2.style.borderColor='#cccccc';
-        immagineGrande.style.backgroundImage='url("consegna/img/02.jpg")';
-        locazione.innerHTML=title[1];
-        descrizioneLocation.innerHTML=text[1];
-        trasparenzaImg1.style.backgroundColor='rgba(0, 0, 0, 0.6)';
-        trasparenzaImg1.style.border='none';
-        trasparenzaImg3.style.backgroundColor='rgba(0, 0, 0, 0.6)';
-        trasparenzaImg3.style.border='none';
-        trasparenzaImg4.style.backgroundColor='rgba(0, 0, 0, 0.6)';
-        trasparenzaImg4.style.border='none';
-        trasparenzaImg5.style.backgroundColor='rgba(0, 0, 0, 0.6)';
-        trasparenzaImg5.style.border='none';
-    }
-    if (immagineSelezionata==3){
-        trasparenzaImg3.style.backgroundColor='rgba(0, 0, 0, 0.0)';
-        trasparenzaImg3.style.borderWidth='5px';
-        trasparenzaImg3.style.borderStyle='inset';
-        trasparenzaImg3.style.borderColor='#cccccc';
-        immagineGrande.style.backgroundImage='url("consegna/img/03.jpg")';
-        locazione.innerHTML=title[2];
-        descrizioneLocation.innerHTML=text[2];
-        trasparenzaImg1.style.backgroundColor='rgba(0, 0, 0, 0.6)';
-        trasparenzaImg1.style.border='none';
-        trasparenzaImg2.style.backgroundColor='rgba(0, 0, 0, 0.6)';
-        trasparenzaImg2.style.border='none';
-        trasparenzaImg4.style.backgroundColor='rgba(0, 0, 0, 0.6)';
-        trasparenzaImg4.style.border='none';
-        trasparenzaImg5.style.backgroundColor='rgba(0, 0, 0, 0.6)';
-        trasparenzaImg5.style.border='none';
-    }
-    if (immagineSelezionata==4){
-        trasparenzaImg4.style.backgroundColor='rgba(0, 0, 0, 0.0)';
-        trasparenzaImg4.style.borderWidth='5px';
-        trasparenzaImg4.style.borderStyle='inset';
-        trasparenzaImg4.style.borderColor='#cccccc';
-        immagineGrande.style.backgroundImage='url("consegna/img/04.jpg")';
-        locazione.innerHTML=title[3];
-        descrizioneLocation.innerHTML=text[3];
-        trasparenzaImg1.style.backgroundColor='rgba(0, 0, 0, 0.6)';
-        trasparenzaImg1.style.border='none';
-        trasparenzaImg2.style.backgroundColor='rgba(0, 0, 0, 0.6)';
-        trasparenzaImg2.style.border='none';
-        trasparenzaImg3.style.backgroundColor='rgba(0, 0, 0, 0.6)';
-        trasparenzaImg3.style.border='none';
-        trasparenzaImg5.style.backgroundColor='rgba(0, 0, 0, 0.6)';
-        trasparenzaImg5.style.border='none';
-    }
-    if (immagineSelezionata==5){
-        trasparenzaImg5.style.backgroundColor='rgba(0, 0, 0, 0.0)';
-        trasparenzaImg5.style.borderWidth='5px';
-        trasparenzaImg5.style.borderStyle='inset';
-        trasparenzaImg5.style.borderColor='#cccccc';
-        immagineGrande.style.backgroundImage='url("consegna/img/05.jpg")';
-        locazione.innerHTML=title[4];
-        descrizioneLocation.innerHTML=text[4];
-        trasparenzaImg1.style.backgroundColor='rgba(0, 0, 0, 0.6)';
-        trasparenzaImg1.style.border='none';
-        trasparenzaImg2.style.backgroundColor='rgba(0, 0, 0, 0.6)';
-        trasparenzaImg2.style.border='none';
-        trasparenzaImg3.style.backgroundColor='rgba(0, 0, 0, 0.6)';
-        trasparenzaImg3.style.border='none';
-        trasparenzaImg4.style.backgroundColor='rgba(0, 0, 0, 0.6)';
-        trasparenzaImg4.style.border='none';
+    for (x=1;x<=5;x++){
+        if (immagineSelezionata==x){
+            trasparenza[x-1].style.backgroundColor='rgba(0, 0, 0, 0.0)';
+            trasparenza[x-1].style.borderWidth='5px';
+            trasparenza[x-1].style.borderStyle='inset';
+            trasparenza[x-1].style.borderColor='#cccccc';
+            switch(x) {
+                case 1:
+                    immagineGrande.style.backgroundImage='url("consegna/img/01.jpg")';
+                    break;
+
+                case 2:
+                    immagineGrande.style.backgroundImage='url("consegna/img/02.jpg")';
+                    break;
+
+                case 3:
+                    immagineGrande.style.backgroundImage='url("consegna/img/03.jpg")';
+                    break;
+
+                case 4:
+                    immagineGrande.style.backgroundImage='url("consegna/img/04.jpg")';
+                    break;
+            
+                default: immagineGrande.style.backgroundImage='url("consegna/img/05.jpg")';
+                    break;
+            }
+            locazione.innerHTML=title[x-1];
+            descrizioneLocation.innerHTML=text[x-1];
+        }
     }
 });
-
-if (immagineSelezionata==1){
-    trasparenzaImg1.style.backgroundColor='rgba(0, 0, 0, 0.0)';
-    trasparenzaImg1.style.borderWidth='5px';
-    trasparenzaImg1.style.borderStyle='inset';
-    trasparenzaImg1.style.borderColor='#cccccc';
-    immagineGrande.style.backgroundImage='url("consegna/img/01.jpg")';
-    locazione.innerHTML=title[0];
-    descrizioneLocation.innerHTML=text[0];
-}
-if (immagineSelezionata==2){
-    trasparenzaImg2.style.backgroundColor='rgba(0, 0, 0, 0.0)';
-    trasparenzaImg2.style.borderWidth='5px';
-    trasparenzaImg2.style.borderStyle='inset';
-    trasparenzaImg2.style.borderColor='#cccccc';
-    immagineGrande.style.backgroundImage='url("consegna/img/02.jpg")';
-    locazione.innerHTML=title[1];
-    descrizioneLocation.innerHTML=text[1];
-}
-if (immagineSelezionata==3){
-    trasparenzaImg3.style.backgroundColor='rgba(0, 0, 0, 0.0)';
-    trasparenzaImg3.style.borderWidth='5px';
-    trasparenzaImg3.style.borderStyle='inset';
-    trasparenzaImg3.style.borderColor='#cccccc';
-    immagineGrande.style.backgroundImage='url("consegna/img/03.jpg")';
-    locazione.innerHTML=title[2];
-    descrizioneLocation.innerHTML=text[2];
-}
-if (immagineSelezionata==4){
-    trasparenzaImg4.style.backgroundColor='rgba(0, 0, 0, 0.0)';
-    trasparenzaImg4.style.borderWidth='5px';
-    trasparenzaImg4.style.borderStyle='inset';
-    trasparenzaImg4.style.borderColor='#cccccc';
-    immagineGrande.style.backgroundImage='url("consegna/img/04.jpg")';
-    locazione.innerHTML=title[3];
-    descrizioneLocation.innerHTML=text[3];
-}
-if (immagineSelezionata==5){
-    trasparenzaImg5.style.backgroundColor='rgba(0, 0, 0, 0.0)';
-    trasparenzaImg5.style.borderWidth='5px';
-    trasparenzaImg5.style.borderStyle='inset';
-    trasparenzaImg5.style.borderColor='#cccccc';
-    immagineGrande.style.backgroundImage='url("consegna/img/05.jpg")';
-    locazione.innerHTML=title[4];
-    descrizioneLocation.innerHTML=text[4];
-}
