@@ -36,7 +36,7 @@ var V = new Vue({
         descrizioneLocation: 'Lorem ipsum'
     },
     methods: {
-        clickFreccia: function(){
+        evidenziaImmagine: function(){
             let trasparenza = document.querySelectorAll('.trasparenza');
             let immagineGrande = document.querySelector('.immagineGrande');
             for (x=0;x<5;x++){
@@ -76,23 +76,37 @@ var V = new Vue({
         },
 
         clickFrecciaSopra: function(){
-            if (V.immagineSelezionata>0){
-                V.immagineSelezionata = V.immagineSelezionata-1;
-            }
-            if (V.immagineSelezionata==0){
+            V.immagineSelezionata = V.immagineSelezionata-1;
+            if (V.immagineSelezionata<=0){
                 V.immagineSelezionata = 5;
             }
-            V.clickFreccia();
+            V.evidenziaImmagine();
         },
 
         clickFrecciaSotto: function(){
-            if (V.immagineSelezionata<6){
-                V.immagineSelezionata = V.immagineSelezionata+1;
-            }
-            if (V.immagineSelezionata==6){
+            V.immagineSelezionata = V.immagineSelezionata+1;
+            if (V.immagineSelezionata>=6){
                 V.immagineSelezionata = 1;
             }
-            V.clickFreccia();
+            V.evidenziaImmagine();
+        },
+
+        clickImmagine: function(){
+            V.immagineSelezionata = event.target.getAttribute('value');
+            V.evidenziaImmagine();
+            console.log(V.immagineSelezionata);
+        },
+
+        intervallo: setInterval(function(){
+            V.immagineSelezionata = V.immagineSelezionata+1;
+            if (V.immagineSelezionata>=6){
+                V.immagineSelezionata = 1;
+            }
+            V.evidenziaImmagine();
+        }, 3000),
+
+        stopIntervallo: function(){
+            clearInterval(intervallo);
         }
     }
 });

@@ -16,22 +16,22 @@
             <p class="descrizioneLocation" :class="descrizioneLocation">{{descrizioneLocation}}</p>
         </div>
         <div class="immaginiDiLato">
-            <div class="img1">
+            <div class="img1" @mouseover="stopIntervallo">
                 <div class="frecciaSopra" @click="clickFrecciaSopra"><i class="fas fa-chevron-up"></i></div>
-                <div class="trasparenza"></div>
+                <div class="trasparenza" value="1" @click="clickImmagine"></div>
             </div>
-            <div class="img2">
-                <div class="trasparenza"></div>
+            <div class="img2" @mouseover="stopIntervallo">
+                <div class="trasparenza" value="2" @click="clickImmagine"></div>
             </div>
-            <div class="img3">
-                <div class="trasparenza"></div>
+            <div class="img3" @mouseover="stopIntervallo">
+                <div class="trasparenza" value="3" @click="clickImmagine"></div>
             </div>
-            <div class="img4">
-                <div class="trasparenza"></div>
+            <div class="img4" @mouseover="stopIntervallo">
+                <div class="trasparenza" value="4" @click="clickImmagine"></div>
             </div>
-            <div class="img5">
+            <div class="img5" @mouseover="stopIntervallo">
                 <div class="frecciaSotto" @click="clickFrecciaSotto"><i class="fas fa-chevron-down"></i></div>
-                <div class="trasparenza"></div>
+                <div class="trasparenza" value="5" @click="clickImmagine"></div>
             </div>
         </div>
     </div>
