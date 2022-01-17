@@ -33,7 +33,8 @@ var V = new Vue({
 
         immagineSelezionata: 2,
         locazione: 'Svizzera',
-        descrizioneLocation: 'Lorem ipsum'
+        descrizioneLocation: 'Lorem ipsum',
+        scorri: null
     },
     methods: {
         evidenziaImmagine: function(){
@@ -94,19 +95,15 @@ var V = new Vue({
         clickImmagine: function(){
             V.immagineSelezionata = event.target.getAttribute('value');
             V.evidenziaImmagine();
-            console.log(V.immagineSelezionata);
+        },
+        
+        intervallo: function(){
+            V.scorri = setInterval(V.clickFrecciaSotto,3000);
         },
 
-        intervallo: setInterval(function(){
-            V.immagineSelezionata = V.immagineSelezionata+1;
-            if (V.immagineSelezionata>=6){
-                V.immagineSelezionata = 1;
-            }
-            V.evidenziaImmagine();
-        }, 3000),
-
         stopIntervallo: function(){
-            clearInterval(intervallo);
+            clearInterval(V.scorri);
+            V.scorri = null;
         }
     }
 });
